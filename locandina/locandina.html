@@ -18,38 +18,46 @@
     }
     .arc { position: absolute; right: -55mm; top: -55mm; width: 170mm; height: 170mm; border-radius: 50%; background: #e3eae4; }
     .content { position: relative; display: flex; flex-direction: column; height: 100%; }
+    .content > * { flex-shrink: 0; }
 
     .top { display: flex; align-items: center; gap: 5mm; }
-    .photo { width: 26mm; height: 26mm; border-radius: 50%; object-fit: cover; border: 1mm solid #fff; box-shadow: 0 0 0 .3mm #d8d2c5; }
+    .photo { width: 22mm; height: 22mm; border-radius: 50%; object-fit: cover; border: 1mm solid #fff; box-shadow: 0 0 0 .3mm #d8d2c5; }
     .name { font-family: "Fraunces", serif; font-size: 6.4mm; line-height: 1.2; }
     .name small { display: block; font-family: "Inter"; font-size: 3.2mm; color: #5f6b66; letter-spacing: .03em; margin-top: 1mm; line-height: 1.4; }
 
-    .kicker { margin: 16mm 0 3mm; font-size: 3.6mm; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: #c0805f; }
-    h1 { font-family: "Fraunces", serif; font-weight: 300; font-size: 16.5mm; line-height: 1.02; margin: 0 0 6mm; letter-spacing: -.01em; }
+    .kicker { margin: 9mm 0 3mm; font-size: 3.6mm; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: #c0805f; }
+    h1 { font-family: "Fraunces", serif; font-weight: 300; font-size: 14.5mm; line-height: 1.02; margin: 0 0 5mm; letter-spacing: -.01em; }
     h1 em { color: #5e7a6c; }
     .lead { font-size: 4.5mm; line-height: 1.5; max-width: 150mm; color: #44504b; margin: 0; }
-    .tags { display: flex; flex-wrap: wrap; gap: 2.2mm; margin: 6mm 0 0; padding: 0; list-style: none; }
+    .tags { display: flex; flex-wrap: wrap; gap: 2.2mm; margin: 5mm 0 0; padding: 0; list-style: none; }
     .tags li { border: .3mm solid #c0805f; color: #8a553b; border-radius: 99px; padding: 1.3mm 3.6mm; font-size: 3.3mm; }
 
-    .info { margin-top: 9mm; display: grid; grid-template-columns: repeat(2, 1fr); background: #445b50; color: #fff; border-radius: 5mm; overflow: hidden; }
+    .info { margin-top: 6mm; display: grid; grid-template-columns: repeat(2, 1fr); background: #445b50; color: #fff; border-radius: 5mm; overflow: hidden; }
     .info div { padding: 5mm 5mm 4.5mm; border-right: .3mm solid rgba(255,255,255,.2); }
     .info div:last-child { border-right: 0; }
     .info span { display: block; font-size: 2.9mm; letter-spacing: .1em; text-transform: uppercase; color: #c9d6cf; }
     .info strong { display: block; font-family: "Fraunces", serif; font-weight: 400; font-size: 8mm; line-height: 1.1; margin-top: 1.5mm; }
     .info small { display: block; font-size: 3.1mm; color: #dfe7e2; margin-top: 1mm; }
 
-    .bottom { margin-top: auto; display: grid; grid-template-columns: 1fr 64mm; gap: 9mm; align-items: center; }
+    .bottom { margin-top: auto; display: grid; grid-template-columns: 1fr 52mm; gap: 9mm; align-items: center; }
     .cta { font-family: "Fraunces", serif; font-size: 10.5mm; line-height: 1.08; margin: 0 0 4mm; }
     .cta em { color: #5e7a6c; }
     .how { margin: 0; padding: 0; list-style: none; counter-reset: s; }
     .how li { counter-increment: s; position: relative; padding-left: 8mm; font-size: 3.9mm; line-height: 1.45; margin-bottom: 2mm; color: #44504b; }
     .how li::before { content: counter(s); position: absolute; left: 0; top: .2mm; width: 5mm; height: 5mm; border-radius: 50%; border: .3mm solid #c0805f; color: #c0805f; font-size: 2.8mm; display: grid; place-items: center; }
-    .qr { background: #fff; border-radius: 5mm; padding: 5mm; text-align: center; box-shadow: 0 0 0 .4mm #5e7a6c; }
+    .qr { background: #fff; border-radius: 5mm; padding: 4mm; text-align: center; box-shadow: 0 0 0 .4mm #5e7a6c; }
     .qr img { width: 100%; display: block; }
     .qr span { display: block; font-size: 3.3mm; margin-top: 2.5mm; color: #445b50; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; }
     .qr small { display: block; font-size: 2.8mm; color: #5f6b66; margin-top: 1mm; }
 
-    .foot { margin-top: 8mm; padding-top: 4mm; border-top: .3mm solid #d8d2c5; display: flex; justify-content: space-between; font-size: 2.9mm; color: #6b7570; }
+    .rev { margin-top: 5mm; display: flex; align-items: center; justify-content: space-between; gap: 6mm;
+      background: #fff; border-radius: 4mm; padding: 3mm 5mm; box-shadow: 0 0 0 .3mm #d8d2c5; }
+    .rev .stars { color: #d39b4a; font-size: 5mm; letter-spacing: .6mm; }
+    .rev strong { display: block; font-family: "Fraunces", serif; font-weight: 400; font-size: 6.5mm; margin: 1mm 0 .5mm; }
+    .rev p { margin: 0; font-size: 3.5mm; color: #5f6b66; line-height: 1.45; }
+    .rev .rqr { display: flex; align-items: center; gap: 3mm; font-size: 3mm; color: #445b50; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; text-align: right; }
+    .rev img { width: 22mm; display: block; }
+    .foot { margin-top: 5mm; padding-top: 4mm; border-top: .3mm solid #d8d2c5; display: flex; justify-content: space-between; font-size: 2.9mm; color: #6b7570; }
     @media screen { .sheet { margin: 10mm auto; box-shadow: 0 4px 30px rgba(0,0,0,.15); } }
   </style>
 </head>
@@ -94,9 +102,17 @@
         </div>
         <div class="qr">
           <img src="qr.svg" alt="QR code per prenotare">
-          <span>Prenota qui</span>
-          <small>studio-denisebrafa.vercel.app/campus</small>
+          <span>Prenota al Campus</span>
         </div>
+      </div>
+
+      <div class="rev">
+        <div>
+          <span class="stars">★★★★★</span>
+          <strong>5/5 · 25 recensioni dei pazienti</strong>
+          <p>Leggi cosa dicono le persone che hanno già fatto un percorso con me.</p>
+        </div>
+        <div class="rqr"><span>Leggi le<br>recensioni</span><img src="qr-recensioni.svg" alt="QR code per leggere le recensioni"></div>
       </div>
 
       <div class="foot">

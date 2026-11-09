@@ -28,19 +28,20 @@
     .glow { position: absolute; right: -60mm; top: -40mm; width: 170mm; height: 170mm; border-radius: 50%;
       background: radial-gradient(circle, rgba(143,150,255,.35), transparent 65%); }
     .content { position: relative; display: flex; flex-direction: column; height: 100%; }
+    .content > * { flex-shrink: 0; }
     .mono { font-family: "JetBrains Mono", monospace; }
 
     .top { display: flex; align-items: center; gap: 5mm; }
     .partner { margin-left: auto; text-align: right; }
     .partner img { height: 17mm; display: block; }
     .partner span { display: block; font-size: 2.5mm; color: var(--muted); margin-bottom: 1.5mm; letter-spacing: .04em; }
-    .photo { width: 24mm; height: 24mm; border-radius: 50%; object-fit: cover; border: .6mm solid var(--accent); }
+    .photo { width: 21mm; height: 21mm; border-radius: 50%; object-fit: cover; border: .6mm solid var(--accent); }
     .name { font-size: 6.2mm; font-weight: 500; line-height: 1.2; }
     .name small { display: block; font-size: 3.2mm; font-weight: 400; color: var(--muted); margin-top: 1mm; line-height: 1.45; }
 
-    .kicker { margin: 12mm 0 4mm; font-size: 3.4mm; color: var(--accent); letter-spacing: .02em; }
+    .kicker { margin: 8mm 0 4mm; font-size: 3.4mm; color: var(--accent); letter-spacing: .02em; }
     .kicker b { color: var(--muted); font-weight: 400; }
-    h1 { font-weight: 300; font-size: 14mm; line-height: 1.04; margin: 0 0 5mm; letter-spacing: -.02em; }
+    h1 { font-weight: 300; font-size: 12.5mm; line-height: 1.04; margin: 0 0 5mm; letter-spacing: -.02em; }
     h1 em { font-style: normal; font-weight: 500; color: var(--accent); }
     h1 .cursor { display: inline-block; width: 1.2mm; height: 11mm; background: var(--accent); margin-left: 2mm; vertical-align: -1.5mm; }
     .lead { font-size: 4.5mm; line-height: 1.5; max-width: 155mm; color: #cfd2f2; margin: 0; }
@@ -48,25 +49,33 @@
     .tags li { border: .3mm solid var(--line); background: rgba(238,240,255,.04); border-radius: 1.5mm; padding: 1.4mm 3mm; font-size: 3.1mm; color: #dfe2ff; }
     .tags li::before { content: "#"; color: var(--accent2); margin-right: .8mm; }
 
-    .info { margin-top: 8mm; margin-bottom: 8mm; display: grid; grid-template-columns: 1.4fr 1fr; border: .3mm solid var(--line); border-radius: 3mm; overflow: hidden; }
+    .info { margin-top: 6mm; margin-bottom: 4mm; display: grid; grid-template-columns: 1.4fr 1fr; border: .3mm solid var(--line); border-radius: 3mm; overflow: hidden; }
     .info div { padding: 5mm 5.5mm; }
     .info div + div { border-left: .3mm solid var(--line); }
     .info span { display: block; font-size: 2.9mm; color: var(--muted); }
     .info strong { display: block; font-weight: 500; font-size: 8mm; line-height: 1.1; margin-top: 2mm; }
     .info small { display: block; font-size: 3.6mm; color: var(--accent); margin-top: 1.2mm; }
 
-    .bottom { margin-top: auto; display: grid; grid-template-columns: 1fr 62mm; gap: 9mm; align-items: center; }
+    .bottom { margin-top: auto; display: grid; grid-template-columns: 1fr 52mm; gap: 9mm; align-items: center; }
     .cta { font-size: 10mm; font-weight: 500; line-height: 1.08; margin: 0 0 5mm; letter-spacing: -.01em; }
     .cta em { font-style: normal; color: var(--accent); }
     .how { margin: 0; padding: 0; list-style: none; }
     .how li { font-size: 3.5mm; line-height: 1.5; margin-bottom: 1.8mm; color: #cfd2f2; }
     .how li span { color: var(--accent2); margin-right: 2mm; }
-    .qr { background: #fff; border-radius: 4mm; padding: 5mm; text-align: center; box-shadow: 0 0 0 1.2mm rgba(139,224,201,.35); }
+    .qr { background: #fff; border-radius: 4mm; padding: 4mm; text-align: center; box-shadow: 0 0 0 1.2mm rgba(139,224,201,.35); }
     .qr img { width: 100%; display: block; }
     .qr span { display: block; font-size: 3.2mm; margin-top: 2.5mm; color: #10132f; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; }
     .qr small { display: block; font-size: 2.6mm; color: #555a80; margin-top: 1mm; }
 
-    .foot { margin-top: 7mm; padding-top: 4mm; border-top: .3mm solid var(--line); display: flex; justify-content: space-between; font-size: 2.8mm; color: var(--muted); }
+    .rev { margin-top: 5mm; display: flex; align-items: center; justify-content: space-between; gap: 6mm;
+      border: .3mm solid var(--line); background: rgba(238,240,255,.04); border-radius: 3mm; padding: 3mm 5mm; }
+    .rev .stars { color: #ffc86b; font-size: 4.6mm; letter-spacing: .6mm; }
+    .rev strong { display: block; font-weight: 500; font-size: 6mm; margin: 1mm 0 .5mm; }
+    .rev p { margin: 0; font-size: 3.3mm; color: var(--muted); line-height: 1.45; }
+    .rev .rqr { display: flex; align-items: center; gap: 3mm; font-size: 2.9mm; color: var(--accent); text-align: right; }
+    .rev .rqr div { background: #fff; padding: 2mm; border-radius: 2mm; }
+    .rev img { width: 20mm; display: block; }
+    .foot { margin-top: 5mm; padding-top: 4mm; border-top: .3mm solid var(--line); display: flex; justify-content: space-between; font-size: 2.8mm; color: var(--muted); }
     @media screen { .sheet { margin: 10mm auto; box-shadow: 0 4px 30px rgba(0,0,0,.25); } }
   </style>
 </head>
@@ -116,8 +125,17 @@
         </div>
         <div class="qr">
           <img src="qr.svg" alt="QR code per prenotare">
-          <span>Prenota qui</span>
+          <span>Prenota al Campus</span>
         </div>
+      </div>
+
+      <div class="rev">
+        <div>
+          <span class="stars">★★★★★</span>
+          <strong>5/5 · 25 recensioni dei pazienti</strong>
+          <p>Leggi cosa dicono le persone che hanno già fatto un percorso con me.</p>
+        </div>
+        <div class="rqr mono"><span>// leggi le<br>recensioni</span><div><img src="qr-recensioni.svg" alt="QR code per leggere le recensioni"></div></div>
       </div>
 
       <div class="foot mono">

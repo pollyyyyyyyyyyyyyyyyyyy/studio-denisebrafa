@@ -1,6 +1,5 @@
 // Rigenera il QR code e i PDF delle due locandine (classica e tech).
-// Uso (dalla cartella strumenti):  npm install  &&  node genera-locandina.mjs [indirizzo]
-// Indirizzo predefinito: /campus, che porta al calendario del Campus.
+// Uso (dalla cartella strumenti):  npm install  &&  node genera-locandina.mjs [link-prenota] [link-recensioni]
 import QRCode from "qrcode";
 import { createRequire } from "node:module";
 import { writeFile } from "node:fs/promises";
@@ -10,17 +9,22 @@ import path from "node:path";
 // Playwright: serve installato (npm i -D playwright && npx playwright install chromium)
 const { chromium } = createRequire(import.meta.url)("playwright");
 
-const url = process.argv[2] || "https://studio-denisebrafa.vercel.app/campus";
+// QR 1: prenotazione al Campus. QR 2: recensioni.
+// Sono link brevi del sito: dove portano si decide in vercel.json, senza ristampare.
+const urlPrenota = process.argv[2] || "https://studio-denisebrafa.vercel.app/campus";
+const urlRecensioni = process.argv[3] || "https://studio-denisebrafa.vercel.app/recensioni";
 const dir = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../locandina");
 
-const svg = await QRCode.toString(url, {
-  type: "svg",
-  errorCorrectionLevel: "M",
-  margin: 0,
-  color: { dark: "#2c3330", light: "#ffffff" },
-});
-await writeFile(path.join(dir, "qr.svg"), svg);
-console.log("QR ->", url);
+for (const [file, url] of [["qr.svg", urlPrenota], ["qr-recensioni.svg", urlRecensioni]]) {
+  const svg = await QRCode.toString(url, {
+    type: "svg",
+    errorCorrectionLevel: "M",
+    margin: 0,
+    color: { dark: "#2c3330", light: "#ffffff" },
+  });
+  await writeFile(path.join(dir, file), svg);
+  console.log(file, "->", url);
+}
 
 const browser = await chromium.launch();
 for (const name of ["locandina", "locandina-tech"]) {
