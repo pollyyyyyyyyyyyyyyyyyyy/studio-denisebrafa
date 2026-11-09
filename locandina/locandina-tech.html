@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <title>Locandina Campus (tech) · Dott.ssa Denise Brafa</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    @page { size: A4; margin: 0; }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; }
+    body { background: #ddd; font-family: "Space Grotesk", sans-serif; }
+    .sheet {
+      --bg: #10132f; --ink: #eef0ff; --muted: #a6abd6; --accent: #8be0c9; --accent2: #8f96ff; --line: rgba(238,240,255,.14);
+      width: 210mm; height: 297mm; margin: 0 auto; position: relative; overflow: hidden;
+      background: var(--bg); color: var(--ink); padding: 16mm 16mm 12mm;
+      -webkit-print-color-adjust: exact; print-color-adjust: exact;
+    }
+    /* griglia di punti sullo sfondo */
+    .dots {
+      position: absolute; inset: 0;
+      background-image: radial-gradient(rgba(238,240,255,.13) .35mm, transparent .4mm);
+      background-size: 6mm 6mm;
+      -webkit-mask-image: linear-gradient(160deg, #000 0%, transparent 55%);
+              mask-image: linear-gradient(160deg, #000 0%, transparent 55%);
+    }
+    .glow { position: absolute; right: -60mm; top: -40mm; width: 170mm; height: 170mm; border-radius: 50%;
+      background: radial-gradient(circle, rgba(143,150,255,.35), transparent 65%); }
+    .content { position: relative; display: flex; flex-direction: column; height: 100%; }
+    .mono { font-family: "JetBrains Mono", monospace; }
+
+    .top { display: flex; align-items: center; gap: 5mm; }
+    .photo { width: 24mm; height: 24mm; border-radius: 50%; object-fit: cover; border: .6mm solid var(--accent); }
+    .name { font-size: 6.2mm; font-weight: 500; line-height: 1.2; }
+    .name small { display: block; font-size: 3.2mm; font-weight: 400; color: var(--muted); margin-top: 1mm; line-height: 1.45; }
+
+    .kicker { margin: 12mm 0 4mm; font-size: 3.4mm; color: var(--accent); letter-spacing: .02em; }
+    .kicker b { color: var(--muted); font-weight: 400; }
+    h1 { font-weight: 300; font-size: 14mm; line-height: 1.04; margin: 0 0 5mm; letter-spacing: -.02em; }
+    h1 em { font-style: normal; font-weight: 500; color: var(--accent); }
+    h1 .cursor { display: inline-block; width: 1.2mm; height: 11mm; background: var(--accent); margin-left: 2mm; vertical-align: -1.5mm; }
+    .lead { font-size: 4.5mm; line-height: 1.5; max-width: 155mm; color: #cfd2f2; margin: 0; }
+    .tags { display: flex; flex-wrap: wrap; gap: 2.2mm; margin: 6mm 0 0; padding: 0; list-style: none; }
+    .tags li { border: .3mm solid var(--line); background: rgba(238,240,255,.04); border-radius: 1.5mm; padding: 1.4mm 3mm; font-size: 3.1mm; color: #dfe2ff; }
+    .tags li::before { content: "#"; color: var(--accent2); margin-right: .8mm; }
+
+    .info { margin-top: 8mm; margin-bottom: 8mm; display: grid; grid-template-columns: 1.4fr 1fr; border: .3mm solid var(--line); border-radius: 3mm; overflow: hidden; }
+    .info div { padding: 5mm 5.5mm; }
+    .info div + div { border-left: .3mm solid var(--line); }
+    .info span { display: block; font-size: 2.9mm; color: var(--muted); }
+    .info strong { display: block; font-weight: 500; font-size: 8mm; line-height: 1.1; margin-top: 2mm; }
+    .info small { display: block; font-size: 3.6mm; color: var(--accent); margin-top: 1.2mm; }
+
+    .bottom { margin-top: auto; display: grid; grid-template-columns: 1fr 62mm; gap: 9mm; align-items: center; }
+    .cta { font-size: 10mm; font-weight: 500; line-height: 1.08; margin: 0 0 5mm; letter-spacing: -.01em; }
+    .cta em { font-style: normal; color: var(--accent); }
+    .how { margin: 0; padding: 0; list-style: none; }
+    .how li { font-size: 3.5mm; line-height: 1.5; margin-bottom: 1.8mm; color: #cfd2f2; }
+    .how li span { color: var(--accent2); margin-right: 2mm; }
+    .qr { background: #fff; border-radius: 4mm; padding: 5mm; text-align: center; box-shadow: 0 0 0 1.2mm rgba(139,224,201,.35); }
+    .qr img { width: 100%; display: block; }
+    .qr span { display: block; font-size: 3.2mm; margin-top: 2.5mm; color: #10132f; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; }
+    .qr small { display: block; font-size: 2.6mm; color: #555a80; margin-top: 1mm; }
+
+    .foot { margin-top: 7mm; padding-top: 4mm; border-top: .3mm solid var(--line); display: flex; justify-content: space-between; font-size: 2.8mm; color: var(--muted); }
+    @media screen { .sheet { margin: 10mm auto; box-shadow: 0 4px 30px rgba(0,0,0,.25); } }
+  </style>
+</head>
+<body>
+  <div class="sheet">
+    <div class="dots"></div>
+    <div class="glow"></div>
+    <div class="content">
+      <div class="top">
+        <img class="photo" src="../assets/img/denise-brafa.jpg" alt="">
+        <div class="name">Dott.ssa Denise Brafa
+          <small>Psicologa · Psicoterapeuta cognitivo-comportamentale<br>Esperta in neuropsicologia</small>
+        </div>
+      </div>
+
+      <p class="kicker mono">// colloqui psicologici <b>@</b> Campus Free Mind Foundry</p>
+      <h1>Anche la mente ha bisogno di <em>manutenzione.</em><span class="cursor"></span></h1>
+      <p class="lead">
+        Deadline, notifiche, ansia da prestazione, la sensazione di essere sempre connessi
+        e mai davvero presenti. Prenditi un'ora per fermarti, fare chiarezza e ritrovare equilibrio.
+      </p>
+      <ul class="tags mono">
+        <li>stress_e_burnout</li>
+        <li>ansia_da_prestazione</li>
+        <li>work_life_balance</li>
+        <li>umore</li>
+        <li>relazioni</li>
+      </ul>
+
+      <div class="info">
+        <div><span class="mono">schedule</span><strong>Martedì e giovedì</strong><small class="mono">16:00 → 20:00</small></div>
+        <div><span class="mono">tariffa_agevolata</span><strong>60 €</strong><small class="mono">sessione 50/60 min</small></div>
+      </div>
+
+      <div class="bottom">
+        <div>
+          <p class="cta">Prenota il tuo slot,<br><em>direttamente.</em></p>
+          <ol class="how mono">
+            <li><span>01</span>inquadra il QR con la fotocamera</li>
+            <li><span>02</span>scegli giorno e orario liberi</li>
+            <li><span>03</span>ricevi la conferma via email</li>
+          </ol>
+        </div>
+        <div class="qr">
+          <img src="qr.svg" alt="QR code per prenotare">
+          <span>Prenota qui</span>
+          <small>studio-denisebrafa.vercel.app/campus</small>
+        </div>
+      </div>
+
+      <div class="foot mono">
+        <span>Iscritta all'Ordine degli Psicologi della Regione Siciliana, n. 9550-A</span>
+        <span>brafadenise@gmail.com</span>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

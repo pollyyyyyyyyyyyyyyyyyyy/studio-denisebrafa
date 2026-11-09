@@ -24,14 +24,14 @@ e il paziente riceve conferma e promemoria via email.
 2. **Impostazioni → Calendari → Collega un calendario → Google Calendar**
    e accedi con l'account Gmail.
 3. **Disponibilità** → crea una disponibilità chiamata *Campus*:
-   solo **venerdì 9:00–19:00**. Per aggiungere un giorno in futuro basta attivarlo qui.
+   solo **martedì e giovedì 16:00–20:00**. Per aggiungere un giorno in futuro basta attivarlo qui.
 4. **Tipi di evento → Nuovo** → *Colloquio al Campus*, con link `campus`:
    - Durata: **50 minuti**
    - Disponibilità: *Campus*
-   - Avanzate → *Buffer dopo l'evento*: **10 minuti**. Così nasce uno slot ogni ora: 9, 10, …, 18, cioè **10 appuntamenti**.
-   - Limiti → *Limita prenotazioni*: **10 al giorno**
+   - Avanzate → *Buffer dopo l'evento*: **10 minuti**. Così nasce uno slot ogni ora: 16, 17, 18 e 19, cioè **4 appuntamenti** per giornata.
+   - Limiti → *Limita prenotazioni*: **4 al giorno**
    - Descrizione: «Tariffa agevolata 60 €, pagamento con bonifico o contanti.»
-   - Luogo: indirizzo del Campus
+   - Luogo: Free Mind Foundry, Via Sclafani 40, Acireale (CT)
 5. Crea gli altri tipi di evento per lo studio, ad esempio *Primo colloquio – Milano*,
    *Primo colloquio – Online* e così via, ognuno con la sua disponibilità.
 6. Apri `assets/main.js` e compila la riga in alto:
@@ -55,7 +55,8 @@ e il paziente riceve conferma e promemoria via email.
 
 ## 3. Locandina e QR code
 
-- `locandina/locandina.pdf`: A4, pronta per la tipografia. Si può stampare anche in A3.
+- Due versioni A4 per il Campus Free Mind Foundry, stampabili anche in A3:
+  `locandina/locandina.pdf` (classica) e `locandina/locandina-tech.pdf` (pensata per le aziende tech del Campus).
 - Il QR porta a `studio-denisebrafa.vercel.app/campus`. Per ora rimanda alla sezione
   «Prenota» del sito; quando c'è il calendario del Campus su Cal.com, rimanda lì (punto 7 sopra). Il redirect sta in `vercel.json`: se un giorno cambia sistema di prenotazione,
   basta modificarlo lì e le locandine già affisse continuano a funzionare.

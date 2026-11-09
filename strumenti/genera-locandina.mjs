@@ -1,4 +1,4 @@
-// Rigenera il QR code e il PDF della locandina.
+// Rigenera il QR code e i PDF delle due locandine (classica e tech).
 // Uso (dalla cartella strumenti):  npm install  &&  node genera-locandina.mjs [indirizzo]
 // Indirizzo predefinito: /campus, che porta al calendario del Campus.
 import QRCode from "qrcode";
@@ -23,11 +23,14 @@ await writeFile(path.join(dir, "qr.svg"), svg);
 console.log("QR ->", url);
 
 const browser = await chromium.launch();
-const page = await browser.newPage();
-await page.goto(pathToFileURL(path.join(dir, "locandina.html")).href, { waitUntil: "networkidle" });
-await page.pdf({ path: path.join(dir, "locandina.pdf"), format: "A4", printBackground: true, preferCSSPageSize: true });
-await page.setViewportSize({ width: 794, height: 1123 });
-await page.emulateMedia({ media: "print" });
-await page.screenshot({ path: path.join(dir, "locandina.png"), clip: { x: 0, y: 0, width: 794, height: 1123 }, scale: "device" });
+for (const name of ["locandina", "locandina-tech"]) {
+  const page = await browser.newPage();
+  await page.goto(pathToFileURL(path.join(dir, `${name}.html`)).href, { waitUntil: "networkidle" });
+  await page.pdf({ path: path.join(dir, `${name}.pdf`), format: "A4", printBackground: true, preferCSSPageSize: true });
+  await page.setViewportSize({ width: 794, height: 1123 });
+  await page.emulateMedia({ media: "print" });
+  await page.screenshot({ path: path.join(dir, `${name}.png`), clip: { x: 0, y: 0, width: 794, height: 1123 } });
+  await page.close();
+  console.log(`Creati ${name}.pdf e ${name}.png`);
+}
 await browser.close();
-console.log("Creati locandina.pdf e locandina.png");
