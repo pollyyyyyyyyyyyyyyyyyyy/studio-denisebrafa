@@ -207,7 +207,7 @@ h3.sub { font-family: var(--sans); font-size: .85rem; font-weight: 600; letter-s
 .booking-notes { list-style: none; padding: 0; margin: 2rem 0 0; display: flex; flex-wrap: wrap; gap: .6rem 2rem; color: var(--muted); font-size: .95rem; }
 .booking-notes strong { color: var(--ink); font-weight: 500; }
 
-.places { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1rem; margin-top: 1.5rem; }
+.places { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-top: 1.5rem; }
 .place { display: block; text-decoration: none; color: inherit; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 1.2rem 1.3rem; transition: border-color .2s; }
 a.place:hover { border-color: var(--sage); }
 a.place h3::after { content: " ↗"; color: var(--clay); font-size: .9rem; }
