@@ -16,13 +16,13 @@ Sito statico in HTML, CSS e JS, senza build: si pubblica così com'è su Vercel 
 
 ## 1. Calendario delle prenotazioni (Cal.com, gratuito)
 
-Cal.com si collega al calendario Outlook/Hotmail: ogni prenotazione finisce lì in automatico
+Cal.com si collega a Google Calendar: ogni prenotazione finisce lì in automatico
 e il paziente riceve conferma e promemoria via email.
 
-1. Vai su <https://cal.com/signup> e registrati con **denisebrafa@hotmail.it**.
+1. Vai su <https://cal.com/signup> e registrati con «Continua con Google» usando **brafadenise@gmail.com**.
    Scegli come nome utente `denisebrafa`, così il link sarà `cal.com/denisebrafa`.
-2. **Impostazioni → Calendari → Collega un calendario → Outlook Calendar**
-   e accedi con l'account Hotmail.
+2. **Impostazioni → Calendari → Collega un calendario → Google Calendar**
+   e accedi con l'account Gmail.
 3. **Disponibilità** → crea una disponibilità chiamata *Campus*:
    solo **venerdì 9:00–19:00**. Per aggiungere un giorno in futuro basta attivarlo qui.
 4. **Tipi di evento → Nuovo** → *Colloquio al Campus*, con link `campus`:
