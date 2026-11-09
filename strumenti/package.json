@@ -1,0 +1,11 @@
+{
+  "name": "strumenti-locandina",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "locandina": "node genera-locandina.mjs"
+  },
+  "dependencies": {
+    "qrcode": "1.5.4"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "cleanUrls": true,
+  "redirects": [
+    { "source": "/campus", "destination": "/#prenota-campus", "permanent": false },
+    { "source": "/prenota", "destination": "/#prenota", "permanent": false }
+  ]
+}

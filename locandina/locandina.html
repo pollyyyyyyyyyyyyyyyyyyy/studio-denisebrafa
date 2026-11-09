@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <title>Locandina Campus · Dott.ssa Denise Brafa</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300;1,9..144,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    @page { size: A4; margin: 0; }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; }
+    body { background: #ddd; font-family: "Inter", sans-serif; color: #2c3330; }
+    .sheet {
+      width: 210mm; height: 297mm; margin: 0 auto; position: relative; overflow: hidden;
+      background: #faf7f2; padding: 16mm 16mm 12mm;
+      -webkit-print-color-adjust: exact; print-color-adjust: exact;
+    }
+    .arc { position: absolute; right: -55mm; top: -55mm; width: 170mm; height: 170mm; border-radius: 50%; background: #e3eae4; }
+    .content { position: relative; display: flex; flex-direction: column; height: 100%; }
+
+    .top { display: flex; align-items: center; gap: 5mm; }
+    .photo { width: 26mm; height: 26mm; border-radius: 50%; object-fit: cover; border: 1mm solid #fff; box-shadow: 0 0 0 .3mm #d8d2c5; }
+    .name { font-family: "Fraunces", serif; font-size: 6.4mm; line-height: 1.2; }
+    .name small { display: block; font-family: "Inter"; font-size: 3.2mm; color: #5f6b66; letter-spacing: .03em; margin-top: 1mm; line-height: 1.4; }
+
+    .kicker { margin: 16mm 0 3mm; font-size: 3.6mm; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: #c0805f; }
+    h1 { font-family: "Fraunces", serif; font-weight: 300; font-size: 16.5mm; line-height: 1.02; margin: 0 0 6mm; letter-spacing: -.01em; }
+    h1 em { color: #5e7a6c; }
+    .lead { font-size: 4.5mm; line-height: 1.5; max-width: 150mm; color: #44504b; margin: 0; }
+    .tags { display: flex; flex-wrap: wrap; gap: 2.2mm; margin: 6mm 0 0; padding: 0; list-style: none; }
+    .tags li { border: .3mm solid #c0805f; color: #8a553b; border-radius: 99px; padding: 1.3mm 3.6mm; font-size: 3.3mm; }
+
+    .info { margin-top: 9mm; display: grid; grid-template-columns: repeat(3, 1fr); background: #445b50; color: #fff; border-radius: 5mm; overflow: hidden; }
+    .info div { padding: 5mm 5mm 4.5mm; border-right: .3mm solid rgba(255,255,255,.2); }
+    .info div:last-child { border-right: 0; }
+    .info span { display: block; font-size: 2.9mm; letter-spacing: .1em; text-transform: uppercase; color: #c9d6cf; }
+    .info strong { display: block; font-family: "Fraunces", serif; font-weight: 400; font-size: 8mm; line-height: 1.1; margin-top: 1.5mm; }
+    .info small { display: block; font-size: 3.1mm; color: #dfe7e2; margin-top: 1mm; }
+
+    .bottom { margin-top: auto; display: grid; grid-template-columns: 1fr 64mm; gap: 9mm; align-items: center; }
+    .cta { font-family: "Fraunces", serif; font-size: 10.5mm; line-height: 1.08; margin: 0 0 4mm; }
+    .cta em { color: #5e7a6c; }
+    .how { margin: 0; padding: 0; list-style: none; counter-reset: s; }
+    .how li { counter-increment: s; position: relative; padding-left: 8mm; font-size: 3.9mm; line-height: 1.45; margin-bottom: 2mm; color: #44504b; }
+    .how li::before { content: counter(s); position: absolute; left: 0; top: .2mm; width: 5mm; height: 5mm; border-radius: 50%; border: .3mm solid #c0805f; color: #c0805f; font-size: 2.8mm; display: grid; place-items: center; }
+    .qr { background: #fff; border-radius: 5mm; padding: 5mm; text-align: center; box-shadow: 0 0 0 .4mm #5e7a6c; }
+    .qr img { width: 100%; display: block; }
+    .qr span { display: block; font-size: 3.3mm; margin-top: 2.5mm; color: #445b50; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; }
+    .qr small { display: block; font-size: 2.8mm; color: #5f6b66; margin-top: 1mm; }
+
+    .foot { margin-top: 8mm; padding-top: 4mm; border-top: .3mm solid #d8d2c5; display: flex; justify-content: space-between; font-size: 2.9mm; color: #6b7570; }
+    @media screen { .sheet { margin: 10mm auto; box-shadow: 0 4px 30px rgba(0,0,0,.15); } }
+  </style>
+</head>
+<body>
+  <div class="sheet">
+    <div class="arc"></div>
+    <div class="content">
+      <div class="top">
+        <img class="photo" src="../assets/img/denise-brafa.jpg" alt="">
+        <div class="name">Dott.ssa Denise Brafa
+          <small>Psicologa clinica · Esperta in neuropsicologia<br>Psicoterapeuta in formazione a indirizzo cognitivo-comportamentale</small>
+        </div>
+      </div>
+
+      <p class="kicker">Colloqui psicologici al Campus</p>
+      <h1>Prenditi uno spazio<br><em>per te.</em></h1>
+      <p class="lead">
+        Ansia, umore, stress, relazioni, rapporto con il cibo: parlarne è il primo passo.
+        Uno spazio di ascolto e accoglienza, senza giudizio.
+      </p>
+      <ul class="tags">
+        <li>Ansia e attacchi di panico</li>
+        <li>Umore e depressione</li>
+        <li>Pensieri ossessivi</li>
+        <li>Disturbi alimentari</li>
+        <li>Difficoltà emotive e relazionali</li>
+      </ul>
+
+      <div class="info">
+        <div><span>Quando</span><strong>Venerdì</strong><small>dalle 9:00 alle 19:00</small></div>
+        <div><span>Tariffa agevolata</span><strong>60 €</strong><small>colloquio di 50/60 minuti</small></div>
+        <div><span>Posti</span><strong>10</strong><small>appuntamenti a giornata</small></div>
+      </div>
+
+      <div class="bottom">
+        <div>
+          <p class="cta">Prenota direttamente<br><em>il tuo appuntamento</em></p>
+          <ol class="how">
+            <li>Inquadra il QR code con la fotocamera del telefono</li>
+            <li>Scegli il venerdì e l'orario libero che preferisci</li>
+            <li>Ricevi subito la conferma via email</li>
+          </ol>
+        </div>
+        <div class="qr">
+          <img src="qr.svg" alt="QR code per prenotare">
+          <span>Prenota qui</span>
+          <small>studio-denisebrafa.vercel.app/campus</small>
+        </div>
+      </div>
+
+      <div class="foot">
+        <span>Iscritta all'Ordine degli Psicologi della Regione Siciliana, n. 9550-A</span>
+        <span>denisebrafa@hotmail.it</span>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
