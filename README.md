@@ -34,12 +34,15 @@ e il paziente riceve conferma e promemoria via email.
    - Luogo: indirizzo del Campus
 5. Crea gli altri tipi di evento per lo studio, ad esempio *Primo colloquio – Milano*,
    *Primo colloquio – Online* e così via, ognuno con la sua disponibilità.
-6. Apri `assets/main.js` e compila le due righe in alto:
+6. Apri `assets/main.js` e compila la riga in alto:
    ```js
-   const CAL_MAIN = "denisebrafa";          // elenco di tutti i colloqui
-   const CAL_CAMPUS = "denisebrafa/campus"; // solo il Campus (QR della locandina)
+   const CAL_MAIN = "denisebrafa";   // elenco dei colloqui (senza il Campus)
    ```
-   Finché sono vuote, il sito mostra un pulsante «Scrivimi per prenotare» via email.
+   Finché è vuota, il sito mostra un pulsante «Scrivimi per prenotare» via email.
+   Nel tipo di evento *Colloquio al Campus* attiva «Nascondi dal profilo»: sul sito non
+   devono comparire prezzi, il Campus si prenota solo dal QR della locandina.
+7. In `vercel.json` cambia la destinazione di `/campus` in
+   `https://cal.com/denisebrafa/campus`: così il QR apre direttamente il calendario del Campus.
 
 ## 2. Pubblicazione su Vercel
 
@@ -53,8 +56,8 @@ e il paziente riceve conferma e promemoria via email.
 ## 3. Locandina e QR code
 
 - `locandina/locandina.pdf`: A4, pronta per la tipografia. Si può stampare anche in A3.
-- Il QR porta a `studio-denisebrafa.vercel.app/campus`, che apre il calendario del Campus
-  sul sito. Il redirect sta in `vercel.json`: se un giorno cambia sistema di prenotazione,
+- Il QR porta a `studio-denisebrafa.vercel.app/campus`. Per ora rimanda alla sezione
+  «Prenota» del sito; quando c'è il calendario del Campus su Cal.com, rimanda lì (punto 7 sopra). Il redirect sta in `vercel.json`: se un giorno cambia sistema di prenotazione,
   basta modificarlo lì e le locandine già affisse continuano a funzionare.
 - Per rigenerare il PDF dopo aver cambiato testi o indirizzo:
   ```bash

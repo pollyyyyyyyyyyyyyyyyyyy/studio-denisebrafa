@@ -2,18 +2,14 @@
    CONFIGURAZIONE: l'unica parte da modificare
    --------------------------------------------------------------------------
    Link delle pagine di prenotazione Cal.com, SENZA "https://cal.com/".
-   Esempio: se il link è https://cal.com/denisebrafa/campus
-            scrivere  "denisebrafa/campus"
+   Esempio: se il link è https://cal.com/denisebrafa
+            scrivere  "denisebrafa"
    Finché un link resta vuoto, al posto del calendario compare il pulsante email.
 
-   CAL_MAIN   → calendario principale (sezione "Prenota una visita").
-                Con solo il nome utente ("denisebrafa") il paziente vede
-                l'elenco di tutti i tipi di colloquio e sceglie.
-   CAL_CAMPUS → calendario del Campus (venerdì 9-19, 10 posti, 60 €):
-                è quello a cui porta il QR code della locandina.
+   Con solo il nome utente ("denisebrafa") il paziente vede l'elenco
+   di tutti i tipi di colloquio e sceglie.
    ========================================================================== */
 const CAL_MAIN = "";
-const CAL_CAMPUS = "";
 
 /* ---------- menu su telefono ---------- */
 const toggle = document.querySelector(".nav-toggle");
@@ -50,7 +46,7 @@ if (sticky && prenota && "IntersectionObserver" in window) {
 }
 
 /* ---------- calendari Cal.com ---------- */
-const calendars = { main: CAL_MAIN, campus: CAL_CAMPUS };
+const calendars = { main: CAL_MAIN };
 const active = Object.entries(calendars).filter(([, link]) => link);
 
 if (active.length) {
