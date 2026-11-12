@@ -24,12 +24,12 @@ e il paziente riceve conferma e promemoria via email.
 2. **Impostazioni → Calendari → Collega un calendario → Google Calendar**
    e accedi con l'account Gmail.
 3. **Disponibilità** → crea una disponibilità chiamata *Campus*:
-   solo **martedì e giovedì 16:00–20:00**. Per aggiungere un giorno in futuro basta attivarlo qui.
+   solo **martedì e giovedì 9:00–20:00**. Per aggiungere un giorno in futuro basta attivarlo qui.
 4. **Tipi di evento → Nuovo** → *Colloquio al Campus*, con link `campus`:
    - Durata: **50 minuti**
    - Disponibilità: *Campus*
-   - Avanzate → *Buffer dopo l'evento*: **10 minuti**. Così nasce uno slot ogni ora: 16, 17, 18 e 19, cioè **4 appuntamenti** per giornata.
-   - Limiti → *Limita prenotazioni*: **4 al giorno**
+   - Avanzate → *Buffer dopo l'evento*: **10 minuti**. Così nasce uno slot ogni ora: dalle 9 alle 19, cioè **11 appuntamenti** per giornata.
+   - Limiti → *Limita prenotazioni*: **11 al giorno** (o meno, se vuole delle pause)
    - Descrizione: «Tariffa agevolata 60 €, pagamento con bonifico o contanti.»
    - Luogo: Free Mind Foundry, Via Sclafani 40, Acireale (CT)
 5. Crea gli altri tipi di evento per lo studio, ad esempio *Primo colloquio – Milano*,
