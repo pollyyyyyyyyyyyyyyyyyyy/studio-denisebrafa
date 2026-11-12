@@ -9,7 +9,7 @@
    Con solo il nome utente ("denisebrafa") il paziente vede l'elenco
    di tutti i tipi di colloquio e sceglie.
    ========================================================================== */
-const CAL_MAIN = "";
+const CAL_MAIN = "denise-brafa-rbcmxz/calendario-studio-privato";
 
 /* ---------- menu su telefono ---------- */
 const toggle = document.querySelector(".nav-toggle");

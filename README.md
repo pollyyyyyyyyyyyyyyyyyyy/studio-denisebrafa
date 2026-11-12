@@ -36,7 +36,7 @@ e il paziente riceve conferma e promemoria via email.
    *Primo colloquio – Online* e così via, ognuno con la sua disponibilità.
 6. Apri `assets/main.js` e compila la riga in alto:
    ```js
-   const CAL_MAIN = "denisebrafa";   // elenco dei colloqui (senza il Campus)
+   const CAL_MAIN = "denise-brafa-rbcmxz/calendario-studio-privato";   // già impostato
    ```
    Finché è vuota, il sito mostra un pulsante «Scrivimi per prenotare» via email.
    Nel tipo di evento *Colloquio al Campus* attiva «Nascondi dal profilo»: sul sito non

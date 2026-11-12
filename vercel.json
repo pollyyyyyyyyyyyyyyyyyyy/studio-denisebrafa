@@ -1,7 +1,7 @@
 {
   "cleanUrls": true,
   "redirects": [
-    { "source": "/campus", "destination": "/#prenota", "permanent": false },
+    { "source": "/campus", "destination": "https://cal.com/denise-brafa-rbcmxz/calendario-campus", "permanent": false },
     { "source": "/prenota", "destination": "/#prenota", "permanent": false },
     { "source": "/recensioni", "destination": "/#recensioni", "permanent": false }
   ]
